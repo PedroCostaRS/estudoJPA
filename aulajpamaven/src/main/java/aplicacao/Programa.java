@@ -21,7 +21,7 @@ public class Programa {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("exemplo-jpa");
 		// Instanciando o em pelos dados do emf
 		EntityManager em = emf.createEntityManager();
-		/*
+
 		// inicia a transação com a base de dados
 		em.getTransaction().begin();
 
@@ -29,19 +29,20 @@ public class Programa {
 		em.persist(p1);
 		em.persist(p2);
 		em.persist(p3);
+		em.persist(p4);
+		em.persist(p5);
 		// dá commit no bd.
 		em.getTransaction().commit();
 		System.out.println("Salvo com sucesso"); // Após o commit exibe mensagem no console.
-		
-*/
+
 		// Faz busca no banco pelo Id de pessoa chamado através da classe Pessoa
 		Pessoa pesquisa = em.find(Pessoa.class, 1);
-		// Exibe o resultado da pesquisa listando por campos escolhidos separadamente ao  invés de lista
+		// Exibe o resultado da pesquisa listando por campos escolhidos separadamente ao
+		// invés de lista
 		System.out.println(pesquisa.getId());
 		System.out.println(pesquisa.getNome());
 		System.out.println(pesquisa.getEmail());
-		
-		
+
 		// Atualização de Registro
 		Pessoa atualiza = em.find(Pessoa.class, 3);
 		em.getTransaction().begin();
