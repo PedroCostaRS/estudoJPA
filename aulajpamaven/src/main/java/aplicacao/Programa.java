@@ -18,7 +18,7 @@ public class Programa {
 		Pessoa p5 = new Pessoa(null, "Joel", "JoelTeste@gmail.com");
 
 		// Instanciando o emf como conexão do banco de dados
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("exemplo-jpa");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("conexao-jpa");
 		// Instanciando o em pelos dados do emf
 		EntityManager em = emf.createEntityManager();
 
